@@ -25,7 +25,7 @@ const Card = (props) => {
         <div className={styles.container}>
                 <img src={image} alt='iphoneX' />
                 <h3>{name}</h3>
-                <p>{cost}</p>
+                <p>{cost}$ {counter ? `  *  ${counter}  =  ${counter * cost} $` : ""}</p>
                 <div className={styles.counter}>
                 <img src={up} alt='Up' onClick={upHandler}/>
                 <span>{counter}</span>
