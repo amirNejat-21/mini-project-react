@@ -1,0 +1,13 @@
+.container{
+    height: 50px;
+    background: rgb(159,159,159 );    
+    text-align: center;
+}
+
+.container p {
+    line-height: 50px;
+}
+
+.container span{
+    font-weight: bold;
+}
