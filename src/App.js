@@ -1,18 +1,20 @@
-import Banner from "./components/Banner";
-import Cards from "./components/Cards";
+import React from "react";
+import { Routes,Route } from "react-router-dom";
 import Footer from "./components/Footer";
-import Logos from "./components/Logos";
+import Landing from "./components/Landing";
 import Navbar from "./components/Navbar";
-import Search from "./components/Search";
+import Product from "./components/Product";
+
+
 
 function App() {
   return (
     <div >
-     <Navbar/>
-     <Banner/>
-     <Cards/>
-     <Search/>
-     <Logos/>
+      <Navbar/>
+       <Routes>
+         <Route path="/"  element={<Landing/>}/>
+         <Route path="/products" element={<Product/>}/>
+       </Routes>
      <Footer/>
     </div>
   );
