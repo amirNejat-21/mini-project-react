@@ -22,6 +22,7 @@ const Card = (props) => {
 
     const {image,name,cost} = props
     return (
+       
         <div className={styles.container}>
                 <img src={image} alt='iphoneX' />
                 <h3>{name}</h3>
@@ -32,6 +33,7 @@ const Card = (props) => {
                 <img className={!counter  ? styles.deActive : ""} src={down} alt='Down' onClick={downHandler}/>
                 </div>
         </div>
+       
     );
 };
 

@@ -13,7 +13,9 @@ function App() {
       <Navbar/>
        <Routes>
          <Route path="/"  element={<Landing/>}/>
+        
          <Route path="/products" element={<Product/>}/>
+        
        </Routes>
      <Footer/>
     </div>

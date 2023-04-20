@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState,useEffect,Suspense} from 'react';
 
 import Card from './Card';
 
@@ -7,6 +7,9 @@ import styles from "./product.module.css"
 
 // API
 import { getProducts } from '../API/api';
+
+// Loading gif
+import Loader from './Loader';
 
 const Product = () => {
      const [product,setProduct] = useState([])
@@ -22,9 +25,15 @@ const Product = () => {
 
     
     return (
-        <div className={styles.container }>
-           {product.map(product => <Card key={product.id} image={product.image} name={product.title} cost={product.price}/>)}
-        </div>
+        <>
+        {product.length ? 
+            <div className={styles.container }>
+            {product.map(product => <Card key={product.id} image={product.image} name={product.title} cost={product.price}/>)}
+         </div> :
+         <Loader/>
+        }
+     
+        </>
     );
 };
 

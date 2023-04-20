@@ -22,9 +22,12 @@ const Cards = () => {
 
 
     return (
+       
         <div className={styles.container}>
             {PhoneData.map(phone => <Card key={phone.id} image={phone.image} name={phone.name} cost={phone.cost}/>)}
         </div>
+    
+       
     );
 };
 
